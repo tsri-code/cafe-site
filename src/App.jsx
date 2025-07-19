@@ -2,7 +2,10 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
 import { initializePerformanceOptimizations } from "./utils/optimizationUtils";
-import { initPerformanceMonitoring } from "./utils/performance";
+import {
+  initPerformanceMonitoring,
+  preloadCriticalImages,
+} from "./utils/performance";
 
 // Import components
 import Header from "./components/Header/Header";
@@ -30,9 +33,7 @@ function App() {
     ];
 
     // Preload images asynchronously
-    import("./utils/performance").then(({ preloadCriticalImages }) => {
-      preloadCriticalImages(criticalImages).catch(console.warn);
-    });
+    preloadCriticalImages(criticalImages).catch(console.warn);
 
     // Set up viewport meta tag for proper mobile rendering
     const viewportMeta = document.querySelector('meta[name="viewport"]');

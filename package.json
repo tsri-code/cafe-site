@@ -9,6 +9,8 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "deploy:manual": "./deploy.sh",
+    "clean": "rm -rf dist node_modules/.vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

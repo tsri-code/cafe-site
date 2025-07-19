@@ -103,3 +103,16 @@ temp/
 
 # vuepress build output
 .vuepress/dist
+
+# GitHub Pages / gh-pages deployment
+.gh-pages/
+gh-pages/
+
+# SSH keys (if accidentally created in project)
+*.pem
+*.key
+id_rsa*
+*.pub
+
+# Deployment logs
+deploy.log
