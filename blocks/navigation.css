@@ -1,0 +1,32 @@
+/* Navigation styles */
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  margin: 30px 30px;
+  height: 39px;
+  width: 105px;
+}
+
+.nav__links {
+  display: flex;
+  column-gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 30px 80px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.nav__link {
+  color: #000000;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav__link:hover {
+  opacity: 0.5;
+}
