@@ -63,7 +63,11 @@ const Footer = () => {
       <div style={contentStyles}>
         <div>
           <img
-            src={isDark ? "/images/lightlogo.png" : "/images/darklogo.png"}
+            src={
+              isDark
+                ? `${import.meta.env.BASE_URL}images/lightlogo.png`
+                : `${import.meta.env.BASE_URL}images/darklogo.png`
+            }
             alt="Coffee Shop Logo"
             style={logoStyles}
           />

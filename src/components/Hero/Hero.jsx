@@ -33,17 +33,17 @@ const Hero = React.memo(() => {
   const carouselImages = useMemo(
     () => [
       {
-        src: "/images/1.png",
+        src: `${import.meta.env.BASE_URL}images/1.png`,
         alt: "Artisan coffee brewing",
         caption: "Crafted with passion & precision",
       },
       {
-        src: "/images/2.png",
+        src: `${import.meta.env.BASE_URL}images/2.png`,
         alt: "Premium coffee experience",
         caption: "Quality you can taste in every sip",
       },
       {
-        src: "/images/3.png",
+        src: `${import.meta.env.BASE_URL}images/3.png`,
         alt: "Coffee culture at its finest",
         caption: "Where great coffee meets community",
       },
@@ -314,7 +314,7 @@ const Hero = React.memo(() => {
       left: 0,
       right: 0,
       bottom: 0,
-      background: `url(/images/background_header.svg) repeat`,
+      background: `url(${import.meta.env.BASE_URL}images/background_header.svg) repeat`,
       opacity: isDark ? 0.05 : 0.1,
       transform: parallaxTransforms.layer1,
       ...getOptimizedTransition("0.1s"),

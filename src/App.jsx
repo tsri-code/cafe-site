@@ -24,12 +24,12 @@ function App() {
 
     // Preload critical resources
     const criticalImages = [
-      "/images/logo_coffeeshop_dark.svg",
-      "/images/logo_coffeeshop_light.svg",
-      "/images/background_header.svg",
-      "/images/1.png",
-      "/images/2.png",
-      "/images/3.png",
+      `${import.meta.env.BASE_URL}images/darklogo.png`,
+      `${import.meta.env.BASE_URL}images/lightlogo.png`,
+      `${import.meta.env.BASE_URL}images/background_header.svg`,
+      `${import.meta.env.BASE_URL}images/1.png`,
+      `${import.meta.env.BASE_URL}images/2.png`,
+      `${import.meta.env.BASE_URL}images/3.png`,
     ];
 
     // Preload images asynchronously
@@ -75,7 +75,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename="/cafe-site">
         <div
           className="App"
           style={{

@@ -188,7 +188,11 @@ const Header = () => {
       <header style={headerStyles}>
         <nav style={navStyles}>
           <img
-            src={isDark ? "/images/darklogo.png" : "/images/lightlogo.png"}
+            src={
+              isDark
+                ? `${import.meta.env.BASE_URL}images/darklogo.png`
+                : `${import.meta.env.BASE_URL}images/lightlogo.png`
+            }
             alt="Coffee Shop Logo"
             style={logoStyles}
             onClick={() => handleNavClick("hero")}
